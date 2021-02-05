@@ -1,6 +1,4 @@
-<p align="center">
 [![](https://img.shields.io/github/issues/OugiFormula/salad-xp-reward-bot?style=for-the-badge)](https://github.com/OugiFormula/salad-xp-reward-bot/issues) [![](https://img.shields.io/github/stars/OugiFormula/salad-xp-reward-bot?style=for-the-badge)](https://github.com/OugiFormula/salad-xp-reward-bot/stargazers) [![](https://img.shields.io/github/forks/OugiFormula/salad-xp-reward-bot?style=for-the-badge)](https://github.com/OugiFormula/salad-xp-reward-bot/network) [![](https://img.shields.io/github/license/OugiFormula/salad-xp-reward-bot?style=for-the-badge)](https://github.com/OugiFormula/salad-xp-reward-bot) [![](https://img.shields.io/twitter/url?style=for-the-badge&url=https%3A%2F%2Fgithub.com%2FOugiFormula%2Fsalad-xp-reward-bot%2F)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2FOugiFormula%2Fsalad-xp-reward-bot%2F)
-</p>
 
 ### Salad XP Rewards
 
