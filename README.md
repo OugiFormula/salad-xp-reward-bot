@@ -48,3 +48,15 @@ Salad: https://github.com/SaladTechnologies/salad-applications
 
 #### If you need more help contact with Ougi Formula#4421 on discord
 
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/Fvn556"><img src="https://avatars1.githubusercontent.com/u/66310363?v=4" width="100px;" alt=""/><br /><sub><b>Fvn556</b></sub></a><br /><a href="https://github.com/OugiFormula/salad-xp-reward-bot/edit/commits?author=AngarosGamer" title="Code">💻</a></td>
+  </tr>
+</table>
