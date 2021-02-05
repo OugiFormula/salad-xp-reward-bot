@@ -13,7 +13,7 @@ Salad: https://github.com/SaladTechnologies/salad-applications
 
 1. Download the bot files
 2. Unzip the **Salad xp reward bot.zip** file
-3. Put your bot token in **.env**
+3. Put your bot token in line 10
 4. Edit the reward def on lines 26
 5. Edit how much xp you want the reward to be for on line 116 and 123
 6. Run **bot.py** with [Python](https://www.python.org "Python")
