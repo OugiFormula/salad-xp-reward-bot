@@ -4,7 +4,6 @@ from discord.ext import commands
 import requests,os,json,time,asyncio,typing,dotenv
 
 from time import sleep
-from mcrcon import MCRcon
 from dotenv import load_dotenv
 from collections.abc import Sequence
 
