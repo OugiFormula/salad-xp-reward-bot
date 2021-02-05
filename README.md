@@ -1,37 +1,51 @@
-## Welcome to Salad XP Reward!
+[![](https://img.shields.io/github/issues/OugiFormula/salad-xp-reward-bot?style=for-the-badge)](https://github.com/OugiFormula/salad-xp-reward-bot/issues) [![](https://img.shields.io/github/stars/OugiFormula/salad-xp-reward-bot?style=for-the-badge)](https://github.com/OugiFormula/salad-xp-reward-bot/stargazers) [![](https://img.shields.io/github/forks/OugiFormula/salad-xp-reward-bot?style=for-the-badge)](https://github.com/OugiFormula/salad-xp-reward-bot/network) [![](https://img.shields.io/github/license/OugiFormula/salad-xp-reward-bot?style=for-the-badge)](https://github.com/OugiFormula/salad-xp-reward-bot) [![](https://img.shields.io/twitter/url?style=for-the-badge&url=https%3A%2F%2Fgithub.com%2FOugiFormula%2Fsalad-xp-reward-bot%2F)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2FOugiFormula%2Fsalad-xp-reward-bot%2F)
 
-You can use the [editor on GitHub](https://github.com/OugiFormula/salad-xp-reward-bot/edit/gh-pages/README.md) to maintain and preview the content for your website in Markdown files.
+### Salad XP Rewards
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+# info
 
-### Markdown
+Salad XP rewards is a bot that was created to integrate between [salad](https://github.com/SaladTechnologies/salad-applications "salad") and discord servers to give salad users any reward the server owner wants.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Salad: https://github.com/SaladTechnologies/salad-applications
 
-```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
+# How to use the bot
 
-- Bulleted
-- List
+1. Download the bot files
+2. Unzip the **Salad xp reward bot.zip** file
+3. Put your bot token in line 10
+4. Edit the reward def on lines 26
+5. Edit how much xp you want the reward to be for on line 116 and 123
+6. Run **bot.py** with [Python](https://www.python.org "Python")
 
-1. Numbered
-2. List
+#### MAKE SURE YOU HAVE [PYTHON INSTALLED TO PATH!](https://datatofish.com/add-python-to-windows-path)
 
-**Bold** and _Italic_ and `Code` text
+# What are the requirements to use this bot?
+  * this bot was created on windows, we didn't official tested on linux but should work
+  * You required to have basic experience with python, you need to code on your own the reward you want to give people.
+  * 
+  + Libraries
+    * Discord.py
+    * dotenv
+    * requests
+    * os
+    * time
+    * asyncio
+    * typing
+## How to setup the bot?
 
-[Link](url) and ![Image](src)
-```
++ Where to put your bot token?
+	* Replace `Enter token here` with your bot token on the .env file!
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
++ How can users find their Salad Auth?
+	* Go to [app.salad.io](https://app.salad.io "app.salad.io") and login with your Salad account.
+	* Click on the Cookies icon: ![](https://images-ext-2.discordapp.net/external/307zW6hU-4O2g0TaCN3VXR29D-byDrPOxcvtV7k5fTs/https/i.imgur.com/rCpRXdW.png) on the left of the address bar.
+	* Click on Cookies.
+	* Open the `app-api.salad.io` folder.
+	* Open the `Cookies` folder.
+	* Click on `Salad.Authentication`.
+	* **Double click** on the **Content** in the `Salad.Authentication` folder.
+	* Right click, and copy!
 
-### Jekyll Themes
+#### If you need more help contact with Ougi Formula#4421 on discord
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/OugiFormula/salad-xp-reward-bot/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
