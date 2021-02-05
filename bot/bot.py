@@ -1,14 +1,13 @@
 import discord
 from discord.ext import commands
 
-import requests,os,json,time,asyncio,typing,dotenv
+import requests,os,json,time,asyncio,typing,
 
 from time import sleep
 from dotenv import load_dotenv
 from collections.abc import Sequence
 
-load_dotenv()
-token = os.getenv('DISCORD_BOT_TOKEN')
+token = 'DISCORD_BOT_TOKEN'
 
 consent = None
 
