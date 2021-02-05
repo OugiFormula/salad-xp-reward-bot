@@ -21,7 +21,7 @@ async def on_ready():
   print ("Bot Name: " + client.user.name)
   print ("Discord Version: " + discord.__version__)
   print ("------------------------------------")
-  await client.change_presence(activity=discord.Game(name='on SaladMC'))
+  await client.change_presence(activity=discord.Game(name='on Salad'))
 
 
 def reward(usrid):
