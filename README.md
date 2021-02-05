@@ -23,7 +23,6 @@ Salad: https://github.com/SaladTechnologies/salad-applications
 # What are the requirements to use this bot?
   * this bot was created on windows, we didn't official tested on linux but should work
   * You required to have basic experience with python, you need to code on your own the reward you want to give people.
-  * 
   + Libraries
     * Discord.py
     * dotenv
