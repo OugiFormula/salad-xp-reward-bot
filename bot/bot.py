@@ -1,9 +1,8 @@
 import discord
 from discord.ext import commands
 
-import requests,os,json,time,asyncio,typing,
+import requests,os,json,asyncio,typing
 
-from time import sleep
 from dotenv import load_dotenv
 from collections.abc import Sequence
 
@@ -19,12 +18,14 @@ async def on_ready():
   print ("------------------------------------")
   print ("Bot Name: " + client.user.name)
   print ("Discord Version: " + discord.__version__)
+  print('Bot created by: Ougi Formula#4421 and Angaros#1263')
   print ("------------------------------------")
-  await client.change_presence(activity=discord.Game(name='on Salad'))
+  await client.change_presence(activity=discord.Game(name='Salad'))
 
-
-def reward(usrid):
-  #Write your reward code here
+#edit this def as much as you need in order to send the reward to the user
+def reward():
+    #Write your reward system here.
+    return 
 
 #Important! do not remove!
 headers = {
@@ -57,10 +58,11 @@ def message_check(channel=None, author=None, content=None, ignore_bot=True, lowe
         return True
     return check
 
+#reward command
 @client.command(pass_context=True)
-async def xpreward(ctx):
+async def reward(ctx):
 	user=ctx.author
-
+	
 	em = discord.Embed(title = "Please follow the instructions sent in dms...")
 	em.set_thumbnail(url="https://mir-s3-cdn-cf.behance.net/project_modules/disp/35771931234507.564a1d2403b3a.gif")
 	message1 = await ctx.send(embed=em)	
@@ -71,10 +73,10 @@ async def xpreward(ctx):
 	em1.add_field(name="None of the data will be stored in our bot", value='if you agree please type in chat "y" if you deny it please type in chat "n"')
 
 	await user.send(embed=em1)
-
+    #check if the user sent dm to the bot responding to the question
 	check = message_check(channel=user.dm_channel,author=user,content=('yes','no','y','n'),ignore_bot=True,lower=True)
 	try:
-		msg = await client.wait_for('message',timeout=15,check=check)
+		msg = await client.wait_for('message',timeout=60,check=check)
 		if msg:
 			if msg.content.lower().strip() == "yes" or "y":
 				consent = True
@@ -88,7 +90,7 @@ async def xpreward(ctx):
 		timeoutembed = discord.Embed(title="Timeout user did not respond")
 		await ctx.send(embed=timeoutembed)
 
-
+    #after confirming the bot usage of your auth code this tutorial on how to get it will be sent in dms
 	if consent is True:
 		await message1.delete()
 		emb = discord.Embed(title = 'waiting for authentication...')
@@ -96,7 +98,7 @@ async def xpreward(ctx):
 		message2= await ctx.send(embed=emb)
 		message4 = await user.send(embed=emb)
 
-		embedus = discord.Embed(title='How can I find my salad auth code? dont worry you have 2 minutes to do it!')
+		embedus = discord.Embed(title='How can I find my salad auth code? dont worry you have 5 minutes to do it!')
 		embedus.add_field(name='Go to app.salad.io and login with your Salad account.', value='-=-=-=-=-=-=-=-=-')
 		embedus.add_field(name='Click on the Cookies icon which looks like a lock on the left of the address bar.',value='-=-=-=-=-=-=-=-=-')
 		embedus.add_field(name='Click on Cookies.',value='-=-=-=-=-=-=-=-=-')
@@ -107,10 +109,10 @@ async def xpreward(ctx):
 
 		message5 = await user.send(embed=embedus)
 
-
+        #check if user sent auth code
 		checkauth = message_check(author=user,channel=user.dm_channel,ignore_bot=True,lower=True)
 		try:
-			msg1 = await client.wait_for('message',timeout=120,check=checkauth)
+			msg1 = await client.wait_for('message',timeout=300,check=checkauth)
 			salad_auth = str(msg1.content)
 			cookie = {"Salad.Authentication": salad_auth}
 			dataobtained = True
@@ -122,6 +124,7 @@ async def xpreward(ctx):
 		await message5.delete()
 		await message2.delete()
 		if dataobtained is True:
+            #Obtain the data from salad api
 			embe = discord.Embed(title='Obtaining data from Salad API...')
 			embe.set_thumbnail(url="https://mir-s3-cdn-cf.behance.net/project_modules/disp/35771931234507.564a1d2403b3a.gif")
 			message3 = await ctx.send(embed=embe)
@@ -133,16 +136,17 @@ async def xpreward(ctx):
 				Errorcode = 10061
 				consent = None
 			except asyncio.JSONDecodeError:
-				print('Wrong Auth Code')
+				print('Auth Code Error')
 				Errorcode = 404
 				consent = None
-			if int(xp) > 100000:
+            # you can change the value of the exp reward here
+			if int(xp) >= 100000:
 				#send reward
-				reward(uuid)
+				reward()
 				await message3.delete()
 				embed = discord.Embed(title="We were able to obtain your request successfully!")
 				await ctx.send(embed=embed)
-
+            #if you don't have enough exp this will return a message
 			elif int(xp) < 100000:
 				await message4.delete()
 				await message5.delete()
@@ -158,8 +162,13 @@ async def xpreward(ctx):
 		emb = discord.Embed(title = 'User denied giving us information we failed to send the reward')
 		message2= await ctx.send(embed=emb)
 	else:
+        #print the error codes
 		await message1.delete()
-		emb = discord.Embed(title=f'Error!: {str(Errorcode)}')
-		message2 = await ctx.send(embed=emb)
+        if Errorcode != None:
+		    emb = discord.Embed(title=f'Error!: {str(Errorcode)} Contact admin')
+		    await ctx.send(embed=emb)
+        else:
+            emb = discord.Embed(title='Error!: Error is undefined please contact moderator')
+            await ctx.send(embed=emb)
 
 client.run(token)
